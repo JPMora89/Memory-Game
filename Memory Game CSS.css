@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color:whitesmoke;
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    min-height: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #05386B;
+
+}
+
+body {
+    height: 100vh;
+    background-color:#05386B;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .Memory_Game{
+    width: 640px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    margin: auto;
+    background:#5CDB95;
+    border-radius: 10px;
+    
+  
+  }
+  
+  .Memory_Card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 5px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+  
+  .Memory_Card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+  }
+  
+  .Memory_Card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    position: absolute;
+    border-radius: 10px;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+  }
